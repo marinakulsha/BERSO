@@ -1,0 +1,298 @@
+.ourContacts {
+    height: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 200px;
+    box-sizing: border-box;
+    border-color: rgb(173, 174, 175);
+    background: linear-gradient(to top, #fbfcfa 0%, #f5fdf3 100%);
+    background: -moz-linear-gradient(top, #fbfcfa 0%, #f5fdf3 100%);
+    background: -webkit-linear-gradient(top, #fbfcfa 0%, #f5fdf3 100%);
+}
+
+.form-container {
+    flex: 0 0 550px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+}
+
+.form-title {
+    flex: 0 0 80px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 40px;
+        margin-top: 0
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .form-field {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+    }
+    .form-field label {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .button-container {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.select-field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    min-width: 350px;
+}
+
+.submit-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.form-field {
+    display: grid;
+    label {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.form-field,
+fieldset-field {
+    margin-bottom: 1.5rem;
+}
+
+.form-field input:not([type="radio"]),
+.form-field select,
+.form-field textarea,
+.form-field fieldset {
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(158, 158, 158);
+    font-size: 13px;
+    background-color: #FFFFFF;
+    color: rgb(0, 0, 0)
+}
+
+.form-field input:not([type="radio"]),
+.form-field select {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.fieldset-field label {
+    font-size: 13px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    background-clip: content-box;
+    border: 1px solid rgb(158, 158, 158);
+    background-color: rgb(158, 158, 158);
+    border-radius: 50%;
+    outline: none;
+}
+
+input[type="radio"]:checked {
+    background-color: rgba(21, 82, 26, 0.966);
+}
+
+.form-field textarea {
+    min-height: 100px;
+    resize: vertical;
+    border-radius: 5px;
+}
+
+.form-field fieldset,
+.form-field select {
+    font-style: normal;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form-field fieldset div {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.form-field input:not([type="radio"]):focus,
+.form-field select:focus,
+.form-field textarea:focus,
+.form-field fieldset:focus {
+    border: 1.2px solid #000;
+    outline: none;
+}
+
+.form-field select {
+    background-image: url("/img/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: calc(100% - 15px);
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.submit-button-container button {
+    flex: 0 1 auto;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 4px 9px;
+    background-color: rgba(28, 102, 34, 0.966);
+    border-radius: 5px;
+    border: 1px solid rgb(43, 82, 53);
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    transition: all .6 ease;
+    &:hover {
+        background-color: rgba(20, 85, 25, 0.966);
+    }
+}
+
+[required]+label:after {
+    content: "*";
+    color: red;
+}
+
+input:not([type="radio"]),
+select,
+textarea {
+    order: 2;
+}
+
+label {
+    order: 1;
+}
+
+.form-field input::-webkit-input-placeholder,
+.form-field textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.form-field input:focus::-webkit-input-placeholder,
+.form-field textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.map-container {
+    flex: 0 1 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    margin-left: 180px;
+}
+
+.map-title {
+    flex: 0 1 300px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    div h2 {
+        margin-top: 0px;
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+    div h3 {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    div p {
+        flex: 0 0 auto;
+        margin: 0;
+        text-align: left;
+        font-size: 17px;
+        line-height: 1.5;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+.tel_contact {
+    flex: 0 0 100px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    a {
+        color: rgb(29, 85, 43);
+        font-weight: 700;
+        margin-bottom: 5px;
+        line-height: 1.2;
+        font-size: 18px;
+        color: rgb(29, 85, 43);
+    }
+}
+
+.jur_adress {
+    flex: 0 0 30px;
+    width: 600px;
+    margin-top: 20px;
+    p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+}
+
+.map-content {
+    flex: 0 1 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#map {
+    flex: 1 1 auto;
+    align-self: stretch;
+}
