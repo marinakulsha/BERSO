@@ -11,7 +11,10 @@ myAppDB.ref('Progress/').on("value", function(snapshot) {
     }
 
     function movingCar([first, ...rest]) {
-        if (!first) return;
+        if (!first) {
+            movingArea.classList.remove('animation');
+            return;
+        }
         cloud.innerHTML = `<span class="textCloud">${first}</span>`;
         setTimeout(function() { movingCar(rest) }, 3000);
     }
