@@ -1,16 +1,21 @@
 {
-    "name": "project",
+    "name": "vbunkere",
     "version": "1.0.0",
-    "description": "",
     "main": "index.js",
+    "description": "vbunkere",
     "scripts": {
         "build": "webpack",
         "watch": "webpack --watch",
-        "start": "webpack-dev-server"
+        "start": "webpack-dev-server",
+        "babel": "babel src -d lib",
+        "instagram": "node instagram/index.js"
     },
     "author": "Marina Kulsha",
     "license": "ISC",
     "devDependencies": {
+        "@babel/cli": "^7.5.0",
+        "@babel/core": "^7.5.4",
+        "@babel/preset-env": "^7.5.4",
         "css-loader": "^2.1.0",
         "extract-text-webpack-plugin": "^4.0.0-beta.0",
         "html-webpack-plugin": "^3.2.0",
@@ -20,5 +25,15 @@
         "webpack": "^4.28.3",
         "webpack-cli": "^3.2.0",
         "webpack-dev-server": "^3.1.14"
+    },
+    "dependencies": {
+        "chart.js": "^2.8.0",
+        "instafeed.js": "^1.4.1",
+        "chalk": "^2.4.1",
+        "clear": "^0.1.0",
+        "figlet": "^1.2.0",
+        "inquirer": "^5.2.0",
+        "ora": "^2.0.0",
+        "puppeteer": "^1.3.0"
     }
 }

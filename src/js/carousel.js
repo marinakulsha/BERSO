@@ -6,7 +6,7 @@
     dotContainer.addEventListener('click', function(event) {
         event.preventDefault();
         if (event.target.dataset.key) {
-            showSlides(event.target.dataset.key);
+            showSlides((event.target.dataset.key) - 1);
         }
     });
 
@@ -42,4 +42,5 @@
         slides[slideIndex].style.display = "block";
         dots[slideIndex].classList.add("active");
     }
+
 }());

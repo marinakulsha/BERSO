@@ -6,11 +6,13 @@ module.exports = {
     entry: {
         index: './src/app.js',
 
+
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
+
     module: {
         rules: [{
             test: /\.scss$/,
@@ -34,4 +36,8 @@ module.exports = {
             filename: 'index.html',
         }),
     ],
+    externals: {
+        moment: 'moment'
+    },
+    mode: 'production'
 };

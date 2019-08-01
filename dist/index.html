@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BERSO HOME</title>
+    <title>ТОНИРОВКА АВТО</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Компания BERSO - оказание услуг в области озеленения и благоустройства частных домов и ландшафтного дизайна">
@@ -12,83 +12,80 @@
     <meta name="copyright" content="Компания BERSO - оказание услуг в области озеленения и благоустройства частных домов и ландшафтного дизайна">
     <meta name="keywords" content="ландшафтный дизайн, озеление, оказание услуг в области ландшафтного дизайна, обустройство ландшафта частных домов, пригодных усаеб, BERSO, пульты управления, системы орошения,роторные распылители K-Rain,статические распылители K-Rain, капельный полив,клапанные боксы, электромагнитные клапаны,осветительное оборудование In-Lite, купить,минск,беларусь">
     <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
 <link href="style.css" rel="stylesheet"></head>
 
 <body>
     <header>
-        <div class="header-container">
-            <nav>
-                <div class="logo">
-                    <a href="/">
-                        <img src="/img/logonew.png">
-                    </a>
-                </div>
+        <nav class="navbar">
+            <!-- <span class="navbar-toggle" id="js-navbar-toggle">
+                    <img  src="/img/menu-button.svg">
+        </span> -->
 
-                <ul class="list">
-                    <li>
-                        <a href="#aboutUs">О нас</a>
-                    </li>
-                    <li>
-                        <a href="#ourService">Наши услуги</a>
-                        <ul class="sub-list">
-                            <li><a href="#serviceProject">Проектирование</a></li>
-                            <li><a href="#serviceGreen">Озеленение</a></li>
-                            <li><a href="#secviceAutowatering">Автополив</a></li>
-                            <li><a href="#serviceLighting">Декоративное освещение</a></li>
-                            <li><a href="#serviceWorker">Мощение</a></li>
-                            <li><a href="#serviceGardening">Уход за садом</a></li>
-                            <li><a href="#serviceTax">Таксация</a></li>
-                        </ul>
-                    </li>
+            <span class="menu-icon navbar-toggle" id="js-navbar-toggle">
+                <svg width="40" height="40" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="loading" x="7" y="8" width="16" height="2" rx="1" fill="white"/>
+                <rect class="loading" x="7" y="18" width="16" height="2" rx="1" fill="white"/>
+                <rect class="loading" x="7" y="13" width="16" height="2" rx="1" fill="white"/>
+                </svg>
+                </span>
 
-                    <li>
-                        <a href="/equipment.html">Оборудование</a>
-                        <ul class="sub-list">
-                            <li><a href="equipment.html#remoteControl">Пульты управления</a></li>
-                            <li><a href="equipment.html#roterSpray">Роторные распылители</a></li>
-                            <li><a href="equipment.html#staticSpray">Статические распылители</a></li>
-                            <li><a href="equipment.html#dropWatering">Капельный полив</a></li>
-                            <li><a href="equipment.html#valveBox">Клапанные боксы</a></li>
-                            <li><a href="equipment.html#electroValve">Электромагнитные клапаны</a></li>
-                            <li><a href="equipment.html#lightingEquip">Осветительное оборудование</a></li>
-                        </ul>
-                    </li>
+            <div class="logo">
+                <a class="img_logo" href="/">
+                </a>
+                <a class="main_label" href="tel:+375291486580">vbunkere<br>+375 (29) 148 65 80 </a>
+            </div>
 
-                    <li>
-                        <a href="/contacts.html">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <ul class="social-networks">
+            <ul class="main-nav" id="js-menu">
                 <li>
-                    <a href="https://www.instagram.com/gardenskyproject/" class="insta"><img src="/img/insta.svg"></a>
+                    <a href="#ourService" class="nav-links">Наши услуги</a>
                 </li>
-
                 <li>
-                    <a href="mailto:info@gardensp.com" class="mail"><img src="/img/mail-icon.svg"></a>
+                    <a href="#ourWorks" class="nav-links">Наши работы</a>
                 </li>
-
                 <li>
-                    <a href="http://gardensky-project.deal.by" class="deal"><img src="/img/deal.png"></a>
+                    <a href="#ourAwards" class="nav-links">Наши достижения</a>
                 </li>
+                <li>
+                    <a href="#ourContacts" class="nav-links">Контакты</a>
+                </li>
+                <li class="social_media">
 
+                    <a href="https://www.instagram.com/vbunkere.by/" target="_blank" class=" nav-links insta"><img src="/img/instagram-1.svg"></a>
+
+
+                    <a href="https://www.facebook.com/Vbunkere-1988334681472801" target="_blank" class=" nav-links facebook_img"><img src="/img/facebook.svg"></a>
+
+
+                    <a href="https://vk.com/vbunkereby" target="_blank" class=" nav-links vk_img"><img src="/img/vk.svg"></a>
+
+
+                    <a href="https://twitter.com/Vbunkereby" target="_blank" class=" nav-links twitt_img"><img src="/img/twitter.svg"></a>
+
+
+                </li>
             </ul>
-        </div>
+
+        </nav>
+
     </header>
 
     <div class="slidesContainer">
 
         <div class="slideshow-container">
-            <div class="slideCollection fade">
-                <img src="/img/slider1.png">
+            <div class="slideCollection fade image1">
+                <div class="slider-text">Тонировка автомобилей</div>
             </div>
-            <div class="slideCollection fade">
-                <img src="/img/slider2.png">
+            <div class="slideCollection fade image2">
             </div>
-            <div class="slideCollection fade">
-                <img src="/img/slider3.png">
+            <div class="slideCollection fade image3">
             </div>
             <a class="previous" id="previous-button">&#10094;</a>
             <a class="next" id="next-button">&#10095;</a>
@@ -105,164 +102,341 @@
     <div class="section-aboutus">
         <div class="aboutus-container">
             <div class="aboutus">
-                <span id="aboutUs">О Нашей Компании</span>
+                <span id="aboutUs">О Нас</span>
             </div>
             <div class="aboutus-description">
                 <p>
-                    Все мы стремимся к красоте, гармонии и уюту. Однако не у каждого из нас хватает времени и знаний чтобы разобраться в разнообразии стилей, как благоустроить территорию вокруг себя, какие растения выбрать и как сделать из простого участка земли цветущий
-                    благоухающий сад. Компания BERSO готова помочь в решении этих вопросов. Мы объединили в своих рядах профессионалов в областях ландшафтного дизайна, озеленения и благоустройства, а так же специалистов по устройству систем автоматического
-                    полива.
-                </p><br>
-                <p>Наша задача – максимально удовлетворить потребности заказчика, начиная с дизайн проекта и заканчивая садом вашей мечты. Компанией обеспечивается техническая поддержка усадебных участков, парков, садов на протяжении всего сезона, а специалистами
-                    в области полива - абонентское обслуживание систем орошения.</p>
+                    Мы специализируемся на тонировке автомобилей различными видами пленок и имеем высокую квалификацию.<br> Мы поможем подобрать наилучшее решение в создании уникального стиля для вашего автомобиля, исходя из ваших потребностей, пожеланий
+                    и возможностей.<br>Перечень наших услуг тесно связан с профессиональными и творческими качествами. Постоянно обучаясь и совершенствуя наши умения и знания мы предоставляем нашим клиентам все самые передовые технологии и новинки на
+                    рынке авто пленок.
+                </p>
+
             </div>
         </div>
         <div class="section-aboutus-image">
-            <div class="container-images1">
-                <div class="about-image1"></div>
-                <div class="about-image2"></div>
-            </div>
-            <div class="container-images2">
-                <div class="about-image3"></div>
-                <div class="about-image4"></div>
-            </div>
+
         </div>
     </div>
 
-    <section class="ourservise-container">
+    <section id="ourService" class="ourservise-container">
 
         <div class="service-title">
-            <span id="ourService">Наши услуги</span>
+            <span>Наши услуги</span>
         </div>
 
         <div class="container-services">
 
-            <div class="service1">
+            <div class="service">
                 <div class="imageservice-container1">
-                    <div class="image-service1" id="serviceProject"></div>
-                    <span>Проектирование</span>
+                    <div class="image-service1"></div>
+                    <span>Тонировка лобового стекла</span>
+                    <div class="serve-container-btn">
+                        <a href="#ourService" data-id="modal_id" class="servebtn">Подробнее</a>
+                        <div class="service-arrow">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="imageservice-container2">
-                    <div class="image-service2" id="serviceGreen"></div>
-                    <span>Озеленение</span>
+                    <div class="image-service2"></div>
+                    <span>Евро тонировка</span>
+                    <div class="serve-container-btn">
+                        <a href="#ourService" data-id="modal_id" class="servebtn">Подробнее</a>
+                        <div class="service-arrow">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="imageservice-container3">
-                    <div class="image-service3" id="secviceAutowatering"></div>
-                    <span>Автополив</span>
+                    <div class="image-service3"></div>
+                    <span>Полная тонировка</span>
+                    <div class="serve-container-btn">
+                        <a href="#ourService" data-id="modal_id" class="servebtn">Подробнее</a>
+                        <div class="service-arrow">
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-            <div class="service2">
-                <div class="imageservice-container4 ">
-                    <div class="image-service4" id="serviceLighting"></div>
-                    <span>Декоративное освещение</span>
+            <div id="modal_id" class="appear-modal closed">
+                <div class="modal-content">
+                    <span class="close_btn-modal">&times;</span>
+                    <div class="modal-container">
+                        <h2><span>Узнать Стоимость</span></h2>
+                        <div class="description_price">
+                            <p>Вы можете узнать стоимость услуг по телефону: </p>
+                            <p>+375 (29) 148 65 80 </p>
+                        </div>
+                        <div class="description_adress">
+                            <p> Наш адрес:</p>
+                            <p> г.Минск пер.Козлова 29</p>
+                        </div>
+                        <div class="social_media">
+                            <a href="https://www.instagram.com/vbunkere.by/" target="_blank" class=" nav-links insta"><img src="/img/instagram-2.svg"></a>
+                            <a href="https://www.facebook.com/Vbunkere-1988334681472801" target="_blank" class=" nav-links facebook_img"><img src="/img/facebook1.svg"></a>
+                            <a href="https://vk.com/vbunkereby" target="_blank" class=" nav-links vk_img"><img src="/img/vk1.svg"></a>
+                            <a href="https://twitter.com/Vbunkereby" target="_blank" class=" nav-links twitt_img"><img src="/img/twitter1.svg"></a>
+                        </div>
+                        <div class="description_timetable">
+                            <p>Работаем ежедневно:</p>
+                            <p>с 10.00 до 22.00</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="imageservice-container5 ">
-                    <div class="image-service5 " id="serviceWorker"></div>
-                    <span>Мощение</span>
+    <section class="ourbrands">
+        <div class="brand-title">
+            <span id="ourBrands"> Компании производители пленок</span>
+        </div>
+        <div class="container-brands">
+            <div class="section-brand1"></div>
+            <div class="section-brand2"></div>
+            <div class="section-brand3"></div>
+        </div>
+        <div></div>
+    </section>
+
+    <section id="ourWorks" class="ourworks">
+        <div class="ourworks-title">
+            <span> Наши Работы</span>
+        </div>
+        <div class="ourworks-wraper">
+            <div class="ourworks-container ">
+                <div class="works works-image1">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-2.jpg"></a>
                 </div>
-
-                <div class="imageservice-container6">
-                    <div class="image-service6" id="serviceGardening"></div>
-                    <span>Уход за садом</span>
+                <div class="works works-image2">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-11.jpg"></a>
                 </div>
+                <div class="works works-image3">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-7.jpg"></a>
+                </div>
+                <div class="works works-image4">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-12.jpg"></a>
+                </div>
+                <div class="works works-image5">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-5.jpg"></a>
+                </div>
+                <div class="works works-image6">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-3.jpg"></a>
+                </div>
+                <div class="works works-image7">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-1.jpg"></a>
+                </div>
+                <div class="works works-image8">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-13.jpg"></a>
+                </div>
+                <div class="works works-image9">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-10.jpg"></a>
+                </div>
+                <div class="works works-image10">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-14.jpg"></a>
+                </div>
+                <div class="works works-image11">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-15.jpg"></a>
+                </div>
+                <div class="works works-image12">
+                    <a href="#ourWorks" data-id="modal-img" data-img="./img/1-9.jpg"></a>
+                </div>
+            </div>
+        </div>
 
+        <div id="modal-img" class="appear_image closed">
+
+            <div class="modal-imgcontent">
+
+                <div class="modal_img_container">
+
+                    <span><svg class="close_btn-modal" id="closeModal" enable-background="new 0 0 512 512" height="512px" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <style type="text/css">
+                        <![CDATA[
+                       
+                        #Layer_2:hover {
+                             fill:   rgb(190, 33, 33);
+                             animation: rotating 1.5s infinite ease-in-out;
+                          }
+                          @keyframes rotating {
+                            0% {
+                                transform: rotate(0deg);
+                                transform-origin:center
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                                transform-origin:center
+                            }
+                        }
+                        ]]>
+                    </style>
+                    <g id="Layer_2"><path d="M363.747,148.753c-59.228-59.227-155.267-59.227-214.494,0c-59.227,59.228-59.227,155.267,0,214.494   c59.228,59.227,155.267,59.227,214.494,0C422.974,304.02,422.974,207.98,363.747,148.753z M256.854,281.81l-71.418,71.418   l-26.163-26.163l71.417-71.418l-70.71-70.711l25.456-25.456l70.711,70.71l70.711-70.71l26.163,26.163l-70.711,70.71l70.711,70.711   l-25.456,25.456L256.854,281.81z"/></g><g id="Layer_3"/></svg></span>
+
+                </div>
             </div>
 
-            <div class="service3">
+        </div>
 
-                <div class="imageservice-container7">
-                    <div class="image-service7 " id="serviceTax"></div>
-                    <span>Таксация</span>
+        <div class="linkMore">
+            <a href="#watchMore" id="watchMore"> Смотреть еще </a>
+            <i class="arrow-down"></i>
+        </div>
+        <div class="additionalSection">
+            <div class="ourworks-wraper">
+                <div class="wrapper-inst">
+                    <div class="instagram-container">
+                        <div class="works inst-image1">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-0-1.jpg"></a>
+                        </div>
+                        <div class="works inst-image2">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-1-1.jpg"></a>
+                        </div>
+                        <div class="works inst-image3">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-2-1.jpg"></a>
+                        </div>
+                        <div class="works inst-image4">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-3-1.jpg"></a>
+                        </div>
+                        <div class="works inst-image5">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-4-1.jpg"></a>
+                        </div>
+                        <div class="works inst-image6">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-5-1.jpg"></a>
+                        </div>
+                        <div class="works inst-image7">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-8-0.jpg"></a>
+                        </div>
+                        <div class="works inst-image8">
+                            <a href="#watchMore" data-id="modal-img" data-img="/img/vbunkere.by/bot-9-1.jpg"></a>
+                        </div>
+                    </div>
+
                 </div>
-
+                <div class="watchLess">
+                    <div class="linkLess">
+                        <i class="arrow-up"></i>
+                        <a href="#watchMore" id="watchLess">Скрыть</a>
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <div class="cover-container">
-        <div class="cover-container_img">
-            <div class="cover-container_fone"></div>
-            <div class="motivation-container-description">
-                <div class="motivation-description">
-                    <div class="motivation-title">
-                        <p>И камень зазеленеет, если к нему с душой подойти... </p>
-                    </div>
-                    <div class="motivation-text">
-                        <p> C помощью дизайна участок приобретает неповторимый характер и становится таким, каким бы вы всегда его хотели видеть. Вы будете удивлены, как меняется ваш участок с помощью тщательно продуманной организации пространства и подбора
-                            растений.
-                        </p>
-                    </div>
-                    <div class="motivation-btn">
-                        <a href="/contacts.html" class="motiv-btn">Оформить заявку</a>
-                        <a href="/contacts.html" class="icon-arow">
-                            <img src="/img/icon-arow.svg">
-                        </a>
-                    </div>
-                </div>
+
+    <section id="awards" class="ourawards">
+        <div class="awards-title">
+            <span id="ourAwards"> Наши достижения</span>
+        </div>
+        <div class="container-awards">
+            <div class="chart">
+                <canvas id="brandsChart" width="500" height="450"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="serviceChart" width="500" height="450"></canvas>
             </div>
         </div>
-    </div>
+        <div id="clickBtn" class="container">
+            <div class="bg"></div>
+            <div class="car-button"><a href="#clickBtn"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
+        </div>
+        <div class="background-car">
+            <div class="facts">
+                <p>Факты о Нас...</p>
+            </div>
+            <div class="car_wraper">
+                <div id="cloud">
+                    <span class="textCloud"></span>
+                </div>
+                <div id="car">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
     <footer>
-        <div class="foter-section ">
+        <div class="footer-section">
+            <div class="form-title" id="formContacts">
+                <h2>Контакты для связи:</h2>
+            </div>
             <div class="footer-container ">
-                <div class="footer_logo ">
-                    <a href="/ ">
-                        <img src="/img/logonew1.png ">
-                    </a>
+                <div class="form-container">
+
+
+                    <form action="https://formspree.io/marina_kul@tut.by" method="POST">
+
+                        <div class="form-field">
+                            <input type="text" class="input-field" name="first_name" value="" placeholder="Введите Имя" required />
+                            <label for="first_name">Имя</label>
+                        </div>
+
+                        <div class="form-field">
+                            <input type="email" class="email-field" name="email" placeholder="email-adress@example.com" required />
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone">Tелефон</label>
+                            <input type="tel" class="phone-number-field" name="phone" placeholder="+375 (29) ХХХХХХХ" />
+                        </div>
+
+                        <div class="form-field">
+                            <textarea name="message" class="textarea-field" placeholder="Введите Сообщение"></textarea>
+                            <label for="adress">Сообщение</label>
+                        </div>
+
+                        <div class="button-container">
+                            <div></div>
+                            <div class="submit-button-container">
+                                <button type="submit">Отправить</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="footer-contacts ">
+                    <div class="contacts-block ">
+                        <div class="block-header ">
+                            <span>Контактная информация</span>
+                        </div>
+                        <div class="block-section ">
+                            <p>
+                                Юридический адрес: <br>г. Минск пер. Козлова, 29
+                            </p>
+                            <p href="tel:+375172663862"> Телефон: <br>+375 (29) 148 65 80</p>
+                            <p href="mailto:info@vbunkere.by"> Email: <br>info@vbunkere.by</p>
+                        </div>
+                    </div>
+                    <div id="instafeed"></div>
+
+                    <li class="social">
+                        <a href="https://www.instagram.com/vbunkere.by/" target="_blank" class=" nav-links insta"><img src="/img/instagram-1.svg"></a>
+                        <a href="https://www.facebook.com/Vbunkere-1988334681472801" target="_blank" class=" nav-links facebook_img"><img src="/img/facebook.svg"></a>
+                        <a href="https://vk.com/vbunkereby" target="_blank" class=" nav-links vk_img"><img src="/img/vk.svg"></a>
+                        <a href="https://twitter.com/Vbunkereby" target="_blank" class=" nav-links twitt_img"><img src="/img/twitter.svg"></a>
+                    </li>
+                    <!-- <div class="footer_contacts">
+                    </div> -->
                 </div>
             </div>
-            <div class="footer-contacts">
-                <div class="contacts-block">
-                    <div class="block-header">
-                        <span>Контактная информация</span>
-                    </div>
 
-                    <div class="block-section">
-                        <p>
-                            Юридический адрес: <br> 220014 г. Минск <br> ул. Ф.Скорины, 14, оф. 213
-                        </p>
-                    </div>
-                </div>
-
-                <div class="footer-socialmedia">
-
-                    <ul class="footer_social-networks">
-                        <li>
-                            <a href="https://www.instagram.com/gardenskyproject/" class="insta"><img src="/img/insta.svg"></a>
-                        </li>
-
-                        <li>
-                            <a href="mailto:info@gardensp.com" class="mail"><img src="/img/mail-icon.svg"></a>
-                        </li>
-
-                        <li>
-                            <a href="http://gardensky-project.deal.by" class="deal"><img src="/img/deal.png"></a>
-                        </li>
-
-                    </ul>
-
-                    <div class="footer_contacts">
-                        <a href="tel:+375172663862">+375 (17) 2663862</a>
-                        <a href="tel:+375293096345">+375 (29) 3096345</a>
-                        <a href="tel:+375293096346">+375 (29) 3096346</a>
-                        <a href="mailto:info@gardensp.com">info@gardensp.com</a>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="footer-end">
-            <p>berso © 2019</p>
+        </div>
+
+
+        </div>
+        <div class="footer-end " id="footer-end ">
+            <p>vbunkere © 2019</p>
         </div>
 
     </footer>
-    <script type="text/javascript" src="bundle.js"></script>
+
+    <script>
+    </script>
 <script type="text/javascript" src="bundle.js"></script></body>
 
 </html>
