@@ -247,10 +247,8 @@ a {
     justify-content: flex-start;
     padding: 0;
     margin: 0; }
-  .nav-links {
-    margin-left: 40px; }
-    .nav-links:hover {
-      color: #969292; }
+  .nav-links:hover {
+    color: #969292; }
   .navbar-toggle {
     display: none; }
   .logo .main_label {
@@ -439,7 +437,6 @@ label {
   opacity: 0; }
 
 .block-header {
-  margin-left: 10px;
   font-size: 16px;
   line-height: 1.5; }
   .block-header span {
@@ -448,9 +445,7 @@ label {
 
 .block-section {
   flex: 0 1 220px;
-  margin-left: 10px;
-  font-size: 14px;
-  height: 100%; }
+  font-size: 14px; }
   .block-section p {
     font-size: 17px;
     line-height: 1.7; }
@@ -523,7 +518,7 @@ label {
   align-self: stretch; }
 .background-car {
   width: 100%;
-  height: 600px;
+  height: 300px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -912,10 +907,8 @@ a {
     justify-content: flex-start;
     padding: 0;
     margin: 0; }
-  .nav-links {
-    margin-left: 40px; }
-    .nav-links:hover {
-      color: #969292; }
+  .nav-links:hover {
+    color: #969292; }
   .navbar-toggle {
     display: none; }
   .logo .main_label {
@@ -1105,7 +1098,6 @@ label {
   opacity: 0; }
 
 .block-header {
-  margin-left: 10px;
   font-size: 16px;
   line-height: 1.5; }
   .block-header span {
@@ -1114,9 +1106,7 @@ label {
 
 .block-section {
   flex: 0 1 220px;
-  margin-left: 10px;
-  font-size: 14px;
-  height: 100%; }
+  font-size: 14px; }
   .block-section p {
     font-size: 17px;
     line-height: 1.7; }
@@ -1190,7 +1180,7 @@ label {
 
 .background-car {
   width: 100%;
-  height: 600px;
+  height: 300px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
